@@ -161,3 +161,30 @@ input:hover {
   display: flex;
   align-items: center;
 }
+
+.username {
+  color: #FAE8EB;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer-todo {
+  font-size: 17px;
+  font-weight: 600;
+  color: #FAE8EB;
+}
+
+.username:hover {
+  color: #22196a;
+}

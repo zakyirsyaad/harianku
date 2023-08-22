@@ -3,6 +3,7 @@ import './App.css';
 import './responsive.css'
 import { AiFillDelete } from 'react-icons/ai';
 import { BsFillCheckSquareFill } from 'react-icons/bs';
+import { AiFillInstagram } from 'react-icons/ai'
 import AOS from 'aos';
 import { Toaster, toast } from 'react-hot-toast';
 AOS.init();
@@ -139,6 +140,12 @@ function App() {
 
         </div>
       </div>
+      <footer>
+        <p className='footer-todo'>Boleh kasih Kritik atau Saran yaa ke sini</p>
+        <a href="https://www.instagram.com/zakyirsyaad/" target="_blank" rel="noopener noreferrer" class="username">
+          <AiFillInstagram size={30} />zakyirsyaad
+        </a>
+      </footer>
     </div>
   );
 }
