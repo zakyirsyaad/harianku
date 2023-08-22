@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+    .todo-container {}
+
+    .header-todo {
+        font-size: 50px;
+    }
+
+    .description-todo {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .todo-wrap {
+        padding: 10px;
+    }
+}
