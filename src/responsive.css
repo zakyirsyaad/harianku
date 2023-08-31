@@ -1,5 +1,8 @@
 @media only screen and (max-width: 600px) {
-    .todo-container {}
+    .todo-container {
+        height: auto;
+        padding: 75px 0px;
+    }
 
     .header-todo {
         font-size: 50px;
@@ -7,10 +10,54 @@
 
     .description-todo {
         font-size: 17px;
-        margin-bottom: 25px;
+    }
+
+    .header-input {
+        font-size: 15px;
     }
 
     .todo-wrap {
-        padding: 10px;
+        background-color: #E4C2C6;
+        padding: 20px 25px
+    }
+
+    .todo-input-container {
+        flex-direction: column;
+        width: 275px;
+        height: 200px;
+    }
+
+    .add {
+        width: 220px;
+    }
+
+    .list-container {
+        width: 100%;
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list {
+        width: 200px;
+        flex-wrap: wrap;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .delete-icon {
+        font-size: 25px;
+        margin-right: 5px;
+    }
+
+    .completed-icon {
+        font-size: 20px;
     }
 }

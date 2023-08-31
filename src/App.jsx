@@ -21,6 +21,13 @@ function App() {
       description: newDescription
     };
     let updatedItem = [...allTodolist];
+
+    if (newTitle.length < 1)
+      return toast.error('Isi dulu yaa')
+
+    if (newDescription.length > 24)
+      return toast.error('Deskripsi jangan terlalu panjang!')
+
     updatedItem.push(newItem);
     setAlltodolist(updatedItem);
     localStorage.setItem("To Do List", JSON.stringify(updatedItem));
@@ -33,10 +40,9 @@ function App() {
   const handleDelete = (index) => {
     let updatedItem = [...allTodolist];
     updatedItem.splice(index, 1);
-
     localStorage.setItem("To Do List", JSON.stringify(updatedItem));
-    setAlltodolist(updatedItem);
     toast.error("Kamu Berhasil Menghapus Kegiatan")
+    setAlltodolist(updatedItem);
   };
 
   const handleComplete = (index) => {
@@ -68,7 +74,8 @@ function App() {
     localStorage.setItem("Completed Item", JSON.stringify(updatedCompleted));
     setCompleteditem(updatedCompleted);
 
-    toast.error("Kamu Berhasil Menghapus Kegiatan")
+    toast.error("Kamu telah menyelesaikan Kegiatan")
+
   };
 
   useEffect(() => {
@@ -119,8 +126,8 @@ function App() {
                 <p className='description'>{item.description}</p>
               </div>
               <div className='list-icon'>
-                <AiFillDelete size={40} color="red" onClick={() => handleDelete(index)} title='delete?' />
-                <BsFillCheckSquareFill size={30} color='#22196a' onClick={() => handleComplete(index)} title='completed?' />
+                <AiFillDelete color="red" onClick={() => handleDelete(index)} title='delete?' />
+                <BsFillCheckSquareFill className='completed-icon' color='#22196a' onClick={() => handleComplete(index)} title='completed?' />
               </div>
             </div>
           ))}
@@ -133,7 +140,7 @@ function App() {
                 <p className='description'>Completed on: {item.completedOn}</p>
               </div>
               <div className='list-icon'>
-                <AiFillDelete size={40} color="red" onClick={() => handleDeleteComplete(index)} title='delete?' />
+                <AiFillDelete className='delete-icon' color="red" onClick={() => handleDeleteComplete(index)} title='delete?' />
               </div>
             </div>
           ))}

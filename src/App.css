@@ -1,16 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-*,
-html,
-body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  font-family: 'Poppins', sans-serif;
-}
-
 .todo-container {
   background-color: #cd9fcc;
   height: 100vh;
@@ -160,6 +147,15 @@ input:hover {
 .list-icon {
   display: flex;
   align-items: center;
+}
+
+.delete-icon {
+  font-size: 35px;
+  margin-right: 5px;
+}
+
+.completed-icon {
+  font-size: 25px;
 }
 
 .username {
