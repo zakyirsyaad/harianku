@@ -126,7 +126,7 @@ function App() {
                 <p className='description'>{item.description}</p>
               </div>
               <div className='list-icon'>
-                <AiFillDelete color="red" onClick={() => handleDelete(index)} title='delete?' />
+                <AiFillDelete className='delete-icon' color="red" onClick={() => handleDelete(index)} title='delete?' />
                 <BsFillCheckSquareFill className='completed-icon' color='#22196a' onClick={() => handleComplete(index)} title='completed?' />
               </div>
             </div>
